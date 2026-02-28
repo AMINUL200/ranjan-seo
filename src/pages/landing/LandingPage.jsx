@@ -23,100 +23,22 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-[#F8FAFC]">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#0B1F3A] to-[#1a2f4a] overflow-hidden">
+      {/* Hero Section - Video Only */}
+      <section className="relative w-full h-screen overflow-hidden">
         {/* Background Video */}
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ filter: "brightness(0.4)" }} // Darken video for better text readability
-          >
-            <source src="/video/22192-326722755_small.mp4" type="video/mp4" />
-            {/* Fallback for browsers that don't support video */}
-            Your browser does not support the video tag.
-          </video>
-
-          {/* Optional: Add an overlay to ensure text readability */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#0B1F3A]/50 to-[#1a2f4a]/40"></div>
-        </div>
-
-        {/* Animated background elements (optional - you can keep or remove these) */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#06B6D4] rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#2563EB] rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                Dominate Search Results With{" "}
-                <span className="text-[#06B6D4]">Data-Driven SEO</span>
-              </h1>
-              <p className="text-[#94A3B8] text-lg mt-6 max-w-lg">
-                Transform your online presence with our proven SEO strategies.
-                We help businesses rank higher, attract more visitors, and
-                convert leads into customers.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <button
-                  className="bg-[#2563EB] text-white px-8 py-4 rounded-lg hover:bg-[#1D4ED8] transition shadow-lg font-semibold flex items-center justify-center group"
-                  style={{ boxShadow: "0 4px 14px rgba(37,99,235,0.35)" }}
-                >
-                  Get Free SEO Audit
-                  <ArrowRight
-                    className="ml-2 group-hover:translate-x-1 transition"
-                    size={20}
-                  />
-                </button>
-                <button className="border-2 border-white/20 text-white px-8 py-4 rounded-lg hover:bg-white/10 transition font-semibold">
-                  Watch Demo
-                </button>
-              </div>
-
-              <div className="flex items-center gap-6 mt-8">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-br from-[#06B6D4] to-[#2563EB] border-2 border-white/30"
-                    ></div>
-                  ))}
-                </div>
-                <p className="text-[#94A3B8]">
-                  <span className="text-white font-bold">500+</span> businesses
-                  trust us
-                </p>
-              </div>
-            </div>
-
-            <div className="relative hidden lg:block">
-              <div className="bg-white/10 backdrop-blur-none rounded-2xl p-8 border border-white/20">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="text-[#06B6D4]" size={20} />
-                    <span>250% average traffic increase</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="text-[#06B6D4]" size={20} />
-                    <span>Top 3 rankings for 500+ keywords</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-white">
-                    <CheckCircle className="text-[#06B6D4]" size={20} />
-                    <span>150% ROI in first 6 months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/video/22192-326722755_small.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Opacity Controller Overlay */}
+        <div className="absolute inset-0 bg-black/20"></div>
       </section>
-
       {/* About Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
